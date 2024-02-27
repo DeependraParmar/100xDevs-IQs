@@ -1,0 +1,20 @@
+1. Why AWS is more preffered over Vercel for frontend deployment?
+- AWS is very cheaper at scale, can get over 99% discounts and provides more control over the infrastructure. Vercel is more expensive and provides less control over the infrastructure.
+
+2. What are objects, object stores(storage) and distributions(Content Delivery Networks) ? 
+- Objects are the files like images, videos, etc. Object stores are the storage services like S3, GCS, etc. Distributions are the services that cache the objects and serve them to the users like CloudFront, etc.
+
+3. What is the main function of Edge Locations or Points of Presence (POPs)?
+- Edge locations are the locations where the data is cached and served to the users. They are used to reduce the latency and provide faster access to the data.
+
+4. Why frontends need to be distributed and not backends?
+- Frontends need to be distributed because they are accessed by the users, have same static files to be served and are having a lot of traffic. Backends are not accessed by the users, responds differently for every user and are having less traffic.
+
+5. Why backend data is not cached?
+- Data server by backend is very user-specific and is having a different response for different users and caching doesn't make sense in this case.
+
+6. Why we do not replicate s3 buckets in multiple regions despite using a CDN?
+- Because keeping data in the object stores is very expensive and there's no use of replicating the data in them unnecessarily forever even if user is not asking it for.
+
+7. How do you serve a frontend on AWS?
+- Firstly, we create a production build of the application which will compile/transpile down the package into static HTML,CSS, JS, images, etc and now, we serve the production build (Static Site Generation). We can use S3 to store the static files and CloudFront to serve the files. 
