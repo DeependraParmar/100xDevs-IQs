@@ -1,0 +1,13 @@
+1. Why AWS is preferred for deploying frontends over Vercel?
+- AWS is more cheaper on scale and provides more control over the infrastructure. You get a lot of discounts about 99% if you are using AWS for a long time. Vercel is more expensive and it is not possible to get discounts.
+
+2. What are objects, storage(object store) and distributions(CDN)?
+- Objects are images, videos, and other files that are stored in a bucket. 
+- Object storage is a storage which stores objects and can serve them globally.
+- Distributions are a way to distribute the objects globally. It is a way to cache the objects in different locations and serve them from the nearest location(edge locations or PoPs) to the user.
+
+3. What are Edge Locations and PoPs?
+- Edge locations and PoPs are the locations where the objects are stored and served from.
+
+4. Why we need to cache the frontends and not the backends?
+- Frontends are static, same files for high traffic and can be cached. Backends are dynamic, responds more user-specifically and cannot be cached.
